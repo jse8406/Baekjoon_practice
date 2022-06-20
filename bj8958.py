@@ -9,4 +9,4 @@ for i in range(num):
             score_sum += score
         else:
             score = 0
-    print(score_sum)
+    print(score_sum) #test
