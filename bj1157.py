@@ -10,4 +10,3 @@ elif (char_set[0][1]) > (char_set[1][1]):
     print(char_set[0][0].upper())
 else:
     print(char_set[1][0].upper())
-    
