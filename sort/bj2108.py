@@ -31,4 +31,4 @@ sorted_li = sorted(li)
 print(round(sum(li)/n)) # 산술평균 
 print(sorted_li[n//2]) # 중앙값
 print(modefinder(li))  # 최빈값
-print(max(li) - min(li)) # 범위
+print(max(li) - min(li))  # 범위
