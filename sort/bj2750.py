@@ -1,5 +1,5 @@
 n = int(input())
-a = []
+a = [0]*10000
 for i in range(n):
     a.append(int(input()))
 a.sort()
