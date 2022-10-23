@@ -35,3 +35,5 @@ for _ in range(test_case):
       else:
         print(i, end='')
     print(']')
+    
+    # deque의 장점: 양방향 pop의 시간복잡도가 O(1)이므로 사실상 reverse()는 시간복잡도만 키울뿐 사용할 필요가 굳이 없다.
