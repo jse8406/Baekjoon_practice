@@ -1,10 +1,13 @@
 n = int(input())
-distnc = list(map(int , input().split())) # distance
-cpl =list(map(int, input().split())) # cost per liter
-cost_sum = distnc[0]*cpl[0]
-min_cost = cpl[0]
+
+distance = list(map(int, input().split()))
+cost = list(map(int, input().split()))
+
+ans = distance[0] * cost[0]
+min_cost = cost[0]
 for i in range(1, n-1):
-    if min_cost > cpl[i]:
-        min_cost = cpl[i]
-    cost_sum += min_cost * distnc[i]
-print(cost_sum)
+    if cost[i] < min_cost:
+        min_cost = cost[i]
+    ans += min_cost * distance[i]
+
+print(ans)
