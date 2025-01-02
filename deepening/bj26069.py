@@ -10,3 +10,5 @@ for i in range(n):
         ans += 1
         dance.append(first)
 print(ans)
+
+# set 자료구조를 사용하면 조건문의 조건을 더 간결하게 줄일 수 있다.
