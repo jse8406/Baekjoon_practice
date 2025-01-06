@@ -1,11 +1,13 @@
-def hanoi(n, from_po, to_po, spare_po):
+N = int(input())
+
+def hanoi(n, start, end, spare):
     if n == 1:
-        print(from_po, to_po)
+        print(start, end)
         return
-    hanoi(n-1, from_po, spare_po, to_po)
-    print(from_po, to_po)
-    hanoi(n-1, spare_po, to_po, from_po)
-    
-n = int(input())
-print(2**n - 1)
-hanoi(n, 1, 3, 2)
+    else:
+        hanoi(n-1, start, spare, end)
+        print(start, end)
+        hanoi(n-1,spare, end, start)
+
+print(2**N-1)
+hanoi(N, 1, 3, 2)
