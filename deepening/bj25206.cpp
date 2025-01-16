@@ -4,13 +4,6 @@
 
 using namespace std;
 
-void main(){
-    string subname, rate;
-    float credit;
-    cin.getline(cin, )
-    return;
-}
-
 float changeScore(string rate){
     if(rate == "A+") return 4.5;
     else if(rate == "A0") return 4.0;
@@ -22,3 +15,23 @@ float changeScore(string rate){
     else if(rate == "D0") return 1.0;
     else if(rate == "F") return 0.0;
 }
+
+int main(){
+    
+    string subname, rate;
+    float credit;
+
+
+    float totalCredit = 0;
+    float totalScore = 0;
+    for(int i=0;i<20;i++){
+        cin >> subname >> credit >> rate;
+        if(rate!="P"){
+            totalCredit += credit;
+            totalScore += changeScore(rate)*credit;
+        }
+    }
+        cout << totalScore/totalCredit;
+    return 0;
+}
+
