@@ -20,6 +20,7 @@ int main(){
         cin >> tmp.first >> tmp.second;
         arr.push_back(tmp);
     }
+    // stable sort == 키 값이 동일하면 기존 순서를 유지한다.
     stable_sort(arr.begin(), arr.end(), compare);
     for(int i = 0; i < N; i++)
         cout << arr[i].first << ' ' << arr[i].second << '\n';
