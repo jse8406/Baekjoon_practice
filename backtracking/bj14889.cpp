@@ -34,6 +34,7 @@ void DFS(int x, int pos) // x는 카운트 수, pos는 다음 값
 	{
 		check[i] = true;
         // cout << "DFS(" << x+1 << ", " << i+1 << ")" << endl; 
+        // x arg = when to calculate the stats sum, i arg = start index to search
 		DFS(x + 1, i + 1);
 		check[i] = false;
 	}
