@@ -5,7 +5,11 @@
 using namespace std;
 
 int stats[21][21];
-int init = INT8_MAX;
+bool check[21];
+int N;
+int ans = 1000000000;
+
+
 
 // pseudo code
 /* 
@@ -20,16 +24,44 @@ int init = INT8_MAX;
 
 */
 // DFS에 필요한 args?
+// 언제 return 할지에 대한 index값 => 현재 팀원 배분이 전체 사람의 절반까지 되었다면 반씩 나눠진 것이므로 return, 결과 return 값 등,,
+void DFS(int n, int next){
+		int start, link;
+		start = 0;
+		link = 0;
 
-void DFS(){
 
-	return;
+	if (N/2 == n){
 
+		for(int i=1;i<=N;i++){
+			for(int j=1;j<=N;j++){
+				if(check[i] == true && check[j] == true) start += stats[i][j];
+				if(check[i] == false && check[j] ==false) link += stats[i][j];
+			}
+		}
+		int temp = abs(start -link);
+		ans = min(temp, ans);
+		return;
+	};
+	for(int i=next; i<N; i++){
+		check[i] = true;
+		DFS(n+1, i+1);
+		check[i] = false;
+	}
 }
 
 int main(){
+	cin >> N;
 
+	for (int i = 1; i <= N; i++)
+	{
+		for (int j = 1; j <= N; j++)
+		{
+			cin >> stats[i][j];
+		}
+	}
 
+	DFS(0, 1); // 카운트 0회부터 숫자는 1부터 시작
 
-	return 0;
+	cout << ans;
 }
