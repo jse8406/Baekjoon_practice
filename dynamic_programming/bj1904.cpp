@@ -3,7 +3,7 @@
 
 using namespace std;
 int dp[1000001];
-
+// main 함수 안에서 dp 배열을 1000001 크기로 선언하면 오버플로우 발생생
 int main(){
 
     dp[1] = 1;
