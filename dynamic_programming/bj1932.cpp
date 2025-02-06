@@ -9,6 +9,7 @@ int main(){
 
     int N;
     cin >> N;
+    // 배열로 입력받기
     for (int i=0; i<N; i++){
         for(int j=0;j<=i;j++){
             cin >> dp[i][j];
