@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<title>KORAIL 전자조달시스템</title>
+
+<script type="text/javascript">
+	function mobileCheck() {
+		var mobileYn = isMobile();
+
+		if (mobileYn) {
+			location.href = "/mobileMain.do";
+		}
+	}
+
+	function isMobile() {
+		var filter = "win16|win32|win64|mac|macintel";
+
+		if (navigator.platform) {
+			if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
+	mobileCheck();
+</script>
+
+<frameset cols="0,100%" border="0">
+	<frame />
+	<frame name="main" id="main" src="https://ebid.korail.com/main.do" />
+	
+	<noframes></noframes>
+</frameset>
