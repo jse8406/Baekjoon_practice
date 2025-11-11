@@ -1,21 +1,25 @@
 import sys
-sys.setrecursionlimit(150000)
 def dfs(t):
     global cnt
-    visited[t] = cnt
-    line[t].sort()
-    for i in line[t]:
-        if not visited[i]:
-            cnt += 1
-            dfs(i)
+    stack = [t]
+    while stack:
+        k = stack.pop()
+        if visited[k]:
+            continue
+        visited[k] = cnt
+        cnt += 1
+        line[k].sort()
+        for l in reversed(line[k]): ## reverse해서 넣는게 핵심
+            if not visited[l]:
+                stack.append(l)
 
-N, M, R = map(int, input().split())
+N, M, R = map(int, sys.stdin.readline().split())
 
 visited = [0]*(N+1)
 cnt = 1
 line = [[]for _ in range(N+1)]
 for _ in range(M):
-    s,e = map(int, input().split())
+    s,e = map(int, sys.stdin.readline().split())
     line[s].append(e)
     line[e].append(s)
 
