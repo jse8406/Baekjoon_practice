@@ -8,9 +8,10 @@ for _ in range(e):
     start, end = map(int ,sys.stdin.readline().split())
     lines[start].append(end)
     # 양방향으로 설정해두어야 하는거??
-    # 최소 탐색이 아닌데 
-    # lines[end].append(start)
-
+    # 시작 정점이 어딘지 모르기 때문에 해둬야함
+    lines[end].append(start)
+for i in range(1, v + 1):
+    lines[i].sort()
 def BFS(R):
     visited = [0]*(v+1)
     q = deque()
