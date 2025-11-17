@@ -34,7 +34,7 @@ for i in range(N):
             c = BFS(i,j)
             count.append(c)
 print(answer)
-for c in count:
+for c in sorted(count):
     print(c)
 
 
