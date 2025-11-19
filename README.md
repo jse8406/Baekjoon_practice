@@ -5,10 +5,16 @@ PS practice for algorithm
 
 # Major algorithm
 
-## Sort
-## Greedy
-## DFS/BFS, brute force (완전 탐색)
-## Binary search
+## Sort  
+sort 자체는 메서드로 대부분 구현이 되어있어서,,sort만하는 문제는 거의 없다.
+## Greedy  
+우선 순위별로 sort를 해서 현재 가장 우선 순위가 높은 것부터 조건에 맞게 연산하는 방식.
+## DFS/BFS, brute force (완전 탐색)  
+brute force는 주로 for문으로 탐색
+DFS는 python에서 재귀나 stack으로, BFS는 deque로 구현한다.  
+재귀도 결국 call stack에 의한 순서로 탐색을 하는 거라 재귀 max_depth recursion error가 나지 않으려면 stack으로 푸는 것이 좋다.
+## Binary search  
+찾고자하는 대상을 정렬되어있는 후보에서 절반씩 후보를 줄여가며 찾아가는 방식. 
 ## Dynamic programming
 Problem을 Subproblem으로 쪼갠 뒤 겹치는 Subproblem에 대해서 memorization을 통해 중복 연산 횟수를 줄여 더 적은 연산으로 문제를 해결하는 방법.
 Overlapping 되는 문제를 저장해둔 값으로 바로 대체. 재귀로 주로 구현.

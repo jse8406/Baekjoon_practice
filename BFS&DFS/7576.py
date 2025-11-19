@@ -1,3 +1,5 @@
+N,M = map(int, input().split())
+
 tomatoes = []
 
 for _ in range(M):
