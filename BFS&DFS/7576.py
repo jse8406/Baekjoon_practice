@@ -9,6 +9,7 @@ from collections import deque
 
 q = deque()
 visited = [[0]*N for _ in range(M)]
+## visited 에 방문 횟수도 저장한다면(이전+1) while문 하나 줄일 수 있다.
 
 for n in range(N):
     for m in range(M):
